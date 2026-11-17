@@ -1,0 +1,33 @@
+{
+  "background_color": "#cfeaff",
+  "description": "우리가족 포켓몬 루틴 대시보드",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any",
+      "sizes": "192x192",
+      "src": "icon-192.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "icon-512.png",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "lang": "ko",
+  "name": "우리가족 포켓몬 월드",
+  "orientation": "any",
+  "scope": "/dashboard/",
+  "short_name": "우리가족",
+  "start_url": "/dashboard/",
+  "theme_color": "#7cc4ff",
+  "id": "/dashboard/"
+}

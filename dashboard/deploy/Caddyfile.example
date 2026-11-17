@@ -1,0 +1,12 @@
+# Caddy: 인터넷 주소(HTTPS 자동) + 가족 비밀번호 → 대시보드(127.0.0.1:8000)로 연결
+# 1) 아래 family.example.com 을 내 주소로 바꾼다 (예: ourfamily.duckdns.org)
+# 2) 비밀번호 암호문 만들기:  caddy hash-password   → 나온 긴 글자를 아래 <암호문> 자리에
+# 3) sudo cp 이 파일 /etc/caddy/Caddyfile  →  sudo systemctl reload caddy
+
+family.example.com {
+	basicauth {
+		family <암호문>
+	}
+	redir / /dashboard/ 302
+	reverse_proxy 127.0.0.1:8000
+}

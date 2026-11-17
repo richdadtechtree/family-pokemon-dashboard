@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="manifest" href="manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="우리가족">
+<meta name="theme-color" content="#7cc4ff">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<title>우리가족 포켓몬 월드</title>
+<!--
+  ┌──────────────────────────────────────────────────────────────┐
+  │ 우리 가족 픽셀 대시보드                                         │
+  │                                                              │
+  │ 이 화면은 "진열장"이고, 내용은 위키 문서(창고)에서 읽어 온다.      │
+  │   - 아이 레벨·생일 D-day  ← 가족 구성원.md                       │
+  │   - 포켓몬 진화 (루틴 1개 = 레벨 1) ← 아이들/포켓몬 기록.md        │
+  │     Lv.5 부화 · 1단계 Lv.10 진화 · 2단계 Lv.15 최종 진화 후 동산 이동 │
+  │     부화할 포켓몬은 100종 중 랜덤 (전설 5%, 뮤 포함)                │
+  │   - 달력·오늘/내일 일정    ← 일정/일정표.md, 일정/가족 연간 일정.md │
+  │   - 할 일·장보기          ← 장보기·할 일.md                      │
+  │   - 아빠 포켓몬 동산(미니) ← 아빠/포켓몬-동료.json (토큰으로 키움)   │
+  │   - 여행 준비물           ← 여행/다음 여행.md                     │
+  │   - 날씨·미세먼지          ← 인터넷(Open-Meteo, 무료·키 없음)       │
+  │                                                              │
+  │ 여는 법은 README.md의 "대시보드" 절 참고.                        │
+  │ 주소 끝에 ?demo 를 붙이면 예시 데이터로 미리 볼 수 있다.            │
+  └──────────────────────────────────────────────────────────────┘
+-->
+<!--
+  코드 위치: 모양·색 = css/style.css, 동작 = js/ (아래 순서대로 불러온다)
+    js/config.js   0. 설정·로그인 확인·아이 색·주소 옵션(?demo, ?lat)
+    js/util.js     1. 날짜 도우미 · 2. 마크다운 읽기
+    js/wiki.js     3. 위키·캘린더·공휴일 불러오기 · 4. 위키 내용 → 화면용 데이터
+    js/pokemon.js  5. 픽셀 그림 · 5-1. 포켓몬 진화(레벨 계산·알·진화 사슬) · 날씨 아이콘
+    js/board.js    6-1~6-8. 대시보드 카드: 시계·달력·여행·오늘내일·+버튼·아빠 동산·할 일·아이·동산·지금·다가오는 날
+    js/kid.js      6-9. 상단 메뉴 · 아이 할 일 화면 · 알 고르기
+    js/sound.js    6-10. 효과음(Web Audio)
+    js/effects.js  6-11. 레벨업·부화·진화 축하 화면
+    js/ladder.js   2-4. 동산 5마리 사다리타기 → 데이트 쿠폰
+    js/fx.js       4-1·4-2. 루틴 체크 → 동산 포켓몬 달리기 · 그날 다 하면 춤
+    js/bday.js     5. 생일 대시보드(배너·풍선·가랜드) · 생일 노래 · ?birthday=첫째 미리 보기
+    js/countdown.js 6. 등교 카운트다운(학교 출발 15분 전, 5분 전 깜박) · ?countdown=7 미리 보기
+    js/growth.js   8. 동산 키 나무 · 아이 몸무게 숫자 패드(키는 부모만 적는다)
+    js/char.js     14. 👕 옷 갈아입기·🛍️ 상점(할 일 화면, 옷·머리·신발·원피스·패딩)
+    js/quiz.js     9. 오늘의 영어(그림 보고 고르기 → 따라 읽기 → ⭐) · 힌트 · 영어 팀 완성
+    js/dex.js      10-2. 아이별 포켓몬 도감 (동산 장부는 pokemon.js·wiki.js)
+    js/visit.js    10-3. 찾아오는 몬스터(하루 한 번 서버 뽑기 → 그림자 공개 연출) · ?visit 미리 보기(예시 화면)
+    js/trade.js    10-4. 포켓몬 교환(제안 → 좋아요 → 엄마·아빠 승인)
+    js/meeting.js  11. 가족회의록(상단 메뉴 🗣️ 가족회의, 가족회의/날짜.md)
+    js/ideas.js    11-2. 가족회의 아이디어·이번 주 도트 화이트보드(아래 메뉴 💡 회의 아이디어, 가족회의/아이디어.md)
+    js/frame.js    13. 사진 액자(30분 무조작 → 슬라이드쇼, 밤엔 어둡게) · ?frame=0.1 미리 보기
+    js/music.js    3. 소리 설정(서버 공통) · 저녁 음악 🎵
+    js/actions.js  눌러서 체크 → serve.py 에 저장 · 화면 전환
+    js/wxfx.js     4-3. 날씨 효과(비·눈·구름 그림자·천둥) · ?weather=rain 미리 보기
+    js/weather.js  집 풍경 · 날씨·미세먼지
+    js/demo.js     7. 예시 데이터(?demo)
+    js/extras.js   7-1. 지수 ATH 대비 하락률 · 7-2. Claude 대화 정리 팝업
+    js/playroom.js 🎮 우리가족 놀이방(20만들기·코딩 로봇·우주 수식 사령관·경마, 사람마다 점수 저장)
+    js/main.js     8. 시작 + 주기적 새로고침 + 화면 맞춤 + 코드 바뀌면 새로고침
+  설정(날씨 위치·소리 등)은 js/config.js 의 CONFIG.
+-->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="fit">
+<div class="grass"></div>
+<!-- 하늘의 픽셀 구름 3개 (위치만 다름) -->
+<canvas class="cloud" data-cloud style="left:30%;top:18px;width:72px"></canvas>
+<canvas class="cloud" data-cloud style="left:46%;top:70px;width:52px"></canvas>
+<canvas class="cloud" data-cloud style="right:3%;top:6px;width:60px"></canvas>
+
+<nav class="tabs" id="tabs"></nav>
+
+<div class="wrap">
+  <!-- 시계 -->
+  <div class="clock-area">
+    <div class="brand"><canvas id="brandIcon"></canvas><span id="brandTitle"></span></div>
+    <div class="clock-box">
+      <div class="date-line" id="dateLine"></div>
+      <div class="time-line">
+        <span class="ampm" id="ampm"></span>
+        <span class="digits"><span id="hh"></span><span class="colon" id="colon">:</span><span id="mm"></span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 날씨 -->
+  <section class="card weather" id="weather">
+    <div class="empty">날씨를 불러오는 중…</div>
+  </section>
+
+  <!-- 왼쪽 열 -->
+  <div class="col left">
+    <section class="card" id="calendar"></section>
+    <section class="card" id="trip"></section>
+    <section class="card" id="days"></section>
+  </div>
+
+  <!-- 오른쪽 열 -->
+  <div class="col right">
+    <section class="card" id="todos"></section>
+    <div class="bottom-row">
+      <section class="card" id="pets"></section>
+      <section class="card home" id="home"></section>
+    </div>
+    <section class="card" id="upcoming"></section>
+  </div>
+
+  <!-- 아이 화면 (메뉴에서 '○○ 동산' 또는 '○○ 할 일'을 누르면 여기만 보인다) -->
+  <div class="view" id="view">
+    <section class="card" id="garden"></section>
+    <section class="card" id="kidTodo"></section>
+    <section class="card" id="meeting"></section>
+    <section class="card" id="ideas"></section>
+    <section class="card" id="playroom"></section>
+  </div>
+</div>
+
+<!-- 지수 ATH 대비 하락률 (가족 대시보드에서만, 아이 화면에서는 숨김) -->
+<div class="idx-wrap"><section class="card" id="indices"><div class="empty">지수 불러오는 중…</div></section></div>
+
+<!-- 아래 메뉴: 가족회의 — 위 메뉴가 두 줄로 넘치지 않게 따로 둔다 -->
+<nav class="tabs bottom" id="tabs2"></nav>
+<div style="padding:0 14px"><div class="notice" id="notice" hidden></div></div>
+<footer id="footer"></footer>
+</div>
+
+<script src="scenes.js"></script>
+<script src="calendar.js"></script>
+<script src="js/config.js"></script>
+<script src="js/util.js"></script>
+<script src="js/wiki.js"></script>
+<script src="js/pokemon.js"></script>
+<script src="js/board.js"></script>
+<script src="js/kid.js"></script>
+<script src="js/sound.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/ladder.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/bday.js"></script>
+<script src="js/countdown.js"></script>
+<script src="js/growth.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/char.js"></script>
+<script src="js/dex.js"></script>
+<script src="js/dad.js"></script>
+<script src="js/visit.js"></script>
+<script src="js/sticker.js"></script>
+<script src="js/trade.js"></script>
+<script src="js/meeting.js"></script>
+<script src="js/ideas.js"></script>
+<script src="js/frame.js"></script>
+<script src="js/music.js"></script>
+<script src="js/actions.js"></script>
+<script src="js/wxfx.js"></script>
+<script src="js/weather.js"></script>
+<script src="js/demo.js"></script>
+<script src="js/extras.js"></script>
+<script src="js/playroom.js"></script>
+<script src="js/main.js"></script>
+<script>
+if ("serviceWorker" in navigator) { navigator.serviceWorker.register("sw.js").catch(function(){}); }
+</script>
+</body>
+</html>

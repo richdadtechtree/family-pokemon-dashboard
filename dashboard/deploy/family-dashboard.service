@@ -1,0 +1,19 @@
+# 가족 대시보드를 서버가 켜질 때 자동으로 실행하고, 꺼지면 다시 켠다 (systemd)
+# 설치: sudo cp dashboard/deploy/family-dashboard.service /etc/systemd/system/
+#       sudo systemctl daemon-reload && sudo systemctl enable --now family-dashboard
+[Unit]
+Description=Family wiki dashboard
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/USER/family-pokemon-dashboard
+Environment=TZ=Asia/Seoul
+# 127.0.0.1 에서만 듣는다 — 바깥 접속은 Caddy(비밀번호 + HTTPS)를 거쳐서만
+ExecStart=/usr/bin/python3 dashboard/serve.py --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

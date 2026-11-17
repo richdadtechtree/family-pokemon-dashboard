@@ -1,0 +1,1163 @@
+{
+ "note": "PokeTokenBar src/pokemon.js 의 알 뽑기 목록(LINES·LEGENDARIES)을 그대로 옮긴 것 — 서버(serve.py)가 아빠 포켓몬 새 알을 뽑을 때 쓴다",
+ "rarityWeight": {
+  "common": 70,
+  "rare": 25,
+  "legendary": 5
+ },
+ "shinyOdds": 0.0078125,
+ "lines": [
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 1,
+     "ko": "이상해씨",
+     "en": "Bulbasaur"
+    },
+    {
+     "dex": 2,
+     "ko": "이상해풀",
+     "en": "Ivysaur"
+    },
+    {
+     "dex": 3,
+     "ko": "이상해꽃",
+     "en": "Venusaur"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 4,
+     "ko": "파이리",
+     "en": "Charmander"
+    },
+    {
+     "dex": 5,
+     "ko": "리자드",
+     "en": "Charmeleon"
+    },
+    {
+     "dex": 6,
+     "ko": "리자몽",
+     "en": "Charizard"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 7,
+     "ko": "꼬부기",
+     "en": "Squirtle"
+    },
+    {
+     "dex": 8,
+     "ko": "어니부기",
+     "en": "Wartortle"
+    },
+    {
+     "dex": 9,
+     "ko": "거북왕",
+     "en": "Blastoise"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 10,
+     "ko": "캐터피",
+     "en": "Caterpie"
+    },
+    {
+     "dex": 11,
+     "ko": "단데기",
+     "en": "Metapod"
+    },
+    {
+     "dex": 12,
+     "ko": "버터플",
+     "en": "Butterfree"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 152,
+     "ko": "치코리타",
+     "en": "Chikorita"
+    },
+    {
+     "dex": 153,
+     "ko": "베이리프",
+     "en": "Bayleef"
+    },
+    {
+     "dex": 154,
+     "ko": "메가니움",
+     "en": "Meganium"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 155,
+     "ko": "브케인",
+     "en": "Cyndaquil"
+    },
+    {
+     "dex": 156,
+     "ko": "마그케인",
+     "en": "Quilava"
+    },
+    {
+     "dex": 157,
+     "ko": "블레이범",
+     "en": "Typhlosion"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 158,
+     "ko": "리아코",
+     "en": "Totodile"
+    },
+    {
+     "dex": 159,
+     "ko": "엘리게이",
+     "en": "Croconaw"
+    },
+    {
+     "dex": 160,
+     "ko": "장크로다일",
+     "en": "Feraligatr"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 252,
+     "ko": "나무지기",
+     "en": "Treecko"
+    },
+    {
+     "dex": 253,
+     "ko": "나무돌이",
+     "en": "Grovyle"
+    },
+    {
+     "dex": 254,
+     "ko": "나무킹",
+     "en": "Sceptile"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 255,
+     "ko": "아차모",
+     "en": "Torchic"
+    },
+    {
+     "dex": 256,
+     "ko": "영치코",
+     "en": "Combusken"
+    },
+    {
+     "dex": 257,
+     "ko": "번치코",
+     "en": "Blaziken"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 258,
+     "ko": "물짱이",
+     "en": "Mudkip"
+    },
+    {
+     "dex": 259,
+     "ko": "늪짱이",
+     "en": "Marshtomp"
+    },
+    {
+     "dex": 260,
+     "ko": "대짱이",
+     "en": "Swampert"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 387,
+     "ko": "모부기",
+     "en": "Turtwig"
+    },
+    {
+     "dex": 388,
+     "ko": "수풀부기",
+     "en": "Grotle"
+    },
+    {
+     "dex": 389,
+     "ko": "토대부기",
+     "en": "Torterra"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 390,
+     "ko": "불꽃숭이",
+     "en": "Chimchar"
+    },
+    {
+     "dex": 391,
+     "ko": "파이숭이",
+     "en": "Monferno"
+    },
+    {
+     "dex": 392,
+     "ko": "초염몽",
+     "en": "Infernape"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 393,
+     "ko": "팽도리",
+     "en": "Piplup"
+    },
+    {
+     "dex": 394,
+     "ko": "팽태자",
+     "en": "Prinplup"
+    },
+    {
+     "dex": 395,
+     "ko": "엠페르트",
+     "en": "Empoleon"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 495,
+     "ko": "주리비얀",
+     "en": "Snivy"
+    },
+    {
+     "dex": 496,
+     "ko": "샤비",
+     "en": "Servine"
+    },
+    {
+     "dex": 497,
+     "ko": "샤로다",
+     "en": "Serperior"
+    }
+   ]
+  },
+  {
+   "rarity": "rare",
+   "chain": [
+    {
+     "dex": 246,
+     "ko": "애버라스",
+     "en": "Larvitar"
+    },
+    {
+     "dex": 247,
+     "ko": "데기라스",
+     "en": "Pupitar"
+    },
+    {
+     "dex": 248,
+     "ko": "마기라스",
+     "en": "Tyranitar"
+    }
+   ]
+  },
+  {
+   "rarity": "rare",
+   "chain": [
+    {
+     "dex": 371,
+     "ko": "아공이",
+     "en": "Bagon"
+    },
+    {
+     "dex": 372,
+     "ko": "쉘곤",
+     "en": "Shelgon"
+    },
+    {
+     "dex": 373,
+     "ko": "보만다",
+     "en": "Salamence"
+    }
+   ]
+  },
+  {
+   "rarity": "rare",
+   "chain": [
+    {
+     "dex": 374,
+     "ko": "메탕",
+     "en": "Beldum"
+    },
+    {
+     "dex": 375,
+     "ko": "메탕구",
+     "en": "Metang"
+    },
+    {
+     "dex": 376,
+     "ko": "메타그로스",
+     "en": "Metagross"
+    }
+   ]
+  },
+  {
+   "rarity": "rare",
+   "chain": [
+    {
+     "dex": 443,
+     "ko": "딥상어동",
+     "en": "Gible"
+    },
+    {
+     "dex": 444,
+     "ko": "한바이트",
+     "en": "Gabite"
+    },
+    {
+     "dex": 445,
+     "ko": "한카리아스",
+     "en": "Garchomp"
+    }
+   ]
+  },
+  {
+   "rarity": "rare",
+   "chain": [
+    {
+     "dex": 610,
+     "ko": "터검니",
+     "en": "Axew"
+    },
+    {
+     "dex": 611,
+     "ko": "액슨도",
+     "en": "Fraxure"
+    },
+    {
+     "dex": 612,
+     "ko": "액스라이즈",
+     "en": "Haxorus"
+    }
+   ]
+  },
+  {
+   "rarity": "rare",
+   "chain": [
+    {
+     "dex": 633,
+     "ko": "모노두",
+     "en": "Deino"
+    },
+    {
+     "dex": 634,
+     "ko": "디헤드",
+     "en": "Zweilous"
+    },
+    {
+     "dex": 635,
+     "ko": "삼삼드래",
+     "en": "Hydreigon"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 172,
+     "ko": "피츄",
+     "en": "피츄"
+    },
+    {
+     "dex": 25,
+     "ko": "피카츄",
+     "en": "피카츄"
+    },
+    {
+     "dex": 26,
+     "ko": "라이츄",
+     "en": "라이츄"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 133,
+     "ko": "이브이",
+     "en": "이브이"
+    },
+    {
+     "dex": 134,
+     "ko": "샤미드",
+     "en": "샤미드"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 133,
+     "ko": "이브이",
+     "en": "이브이"
+    },
+    {
+     "dex": 135,
+     "ko": "쥬피썬더",
+     "en": "쥬피썬더"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 133,
+     "ko": "이브이",
+     "en": "이브이"
+    },
+    {
+     "dex": 136,
+     "ko": "부스터",
+     "en": "부스터"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 133,
+     "ko": "이브이",
+     "en": "이브이"
+    },
+    {
+     "dex": 196,
+     "ko": "에브이",
+     "en": "에브이"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 133,
+     "ko": "이브이",
+     "en": "이브이"
+    },
+    {
+     "dex": 197,
+     "ko": "블래키",
+     "en": "블래키"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 133,
+     "ko": "이브이",
+     "en": "이브이"
+    },
+    {
+     "dex": 470,
+     "ko": "리피아",
+     "en": "리피아"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 133,
+     "ko": "이브이",
+     "en": "이브이"
+    },
+    {
+     "dex": 471,
+     "ko": "글레이시아",
+     "en": "글레이시아"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 133,
+     "ko": "이브이",
+     "en": "이브이"
+    },
+    {
+     "dex": 700,
+     "ko": "님피아",
+     "en": "님피아"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 174,
+     "ko": "푸푸린",
+     "en": "푸푸린"
+    },
+    {
+     "dex": 39,
+     "ko": "푸린",
+     "en": "푸린"
+    },
+    {
+     "dex": 40,
+     "ko": "푸크린",
+     "en": "푸크린"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 173,
+     "ko": "삐",
+     "en": "삐"
+    },
+    {
+     "dex": 35,
+     "ko": "삐삐",
+     "en": "삐삐"
+    },
+    {
+     "dex": 36,
+     "ko": "픽시",
+     "en": "픽시"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 54,
+     "ko": "고라파덕",
+     "en": "고라파덕"
+    },
+    {
+     "dex": 55,
+     "ko": "골덕",
+     "en": "골덕"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 175,
+     "ko": "토게피",
+     "en": "토게피"
+    },
+    {
+     "dex": 176,
+     "ko": "토게틱",
+     "en": "토게틱"
+    },
+    {
+     "dex": 468,
+     "ko": "토게키스",
+     "en": "토게키스"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 298,
+     "ko": "루리리",
+     "en": "루리리"
+    },
+    {
+     "dex": 183,
+     "ko": "마릴",
+     "en": "마릴"
+    },
+    {
+     "dex": 184,
+     "ko": "마릴리",
+     "en": "마릴리"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 52,
+     "ko": "나옹",
+     "en": "나옹"
+    },
+    {
+     "dex": 53,
+     "ko": "페르시온",
+     "en": "페르시온"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 446,
+     "ko": "먹고자",
+     "en": "먹고자"
+    },
+    {
+     "dex": 143,
+     "ko": "잠만보",
+     "en": "잠만보"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 19,
+     "ko": "꼬렛",
+     "en": "꼬렛"
+    },
+    {
+     "dex": 20,
+     "ko": "레트라",
+     "en": "레트라"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 69,
+     "ko": "모다피",
+     "en": "모다피"
+    },
+    {
+     "dex": 70,
+     "ko": "우츠동",
+     "en": "우츠동"
+    },
+    {
+     "dex": 71,
+     "ko": "우츠보트",
+     "en": "우츠보트"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 417,
+     "ko": "파치리스",
+     "en": "파치리스"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 944,
+     "ko": "땃쭈르",
+     "en": "땃쭈르"
+    },
+    {
+     "dex": 945,
+     "ko": "태깅구르",
+     "en": "태깅구르"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 179,
+     "ko": "메리프",
+     "en": "메리프"
+    },
+    {
+     "dex": 180,
+     "ko": "보송송",
+     "en": "보송송"
+    },
+    {
+     "dex": 181,
+     "ko": "전룡",
+     "en": "전룡"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 280,
+     "ko": "랄토스",
+     "en": "랄토스"
+    },
+    {
+     "dex": 281,
+     "ko": "킬리아",
+     "en": "킬리아"
+    },
+    {
+     "dex": 282,
+     "ko": "가디안",
+     "en": "가디안"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 220,
+     "ko": "꾸꾸리",
+     "en": "꾸꾸리"
+    },
+    {
+     "dex": 221,
+     "ko": "메꾸리",
+     "en": "메꾸리"
+    },
+    {
+     "dex": 473,
+     "ko": "맘모꾸리",
+     "en": "맘모꾸리"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 270,
+     "ko": "연꽃몬",
+     "en": "연꽃몬"
+    },
+    {
+     "dex": 271,
+     "ko": "로토스",
+     "en": "로토스"
+    },
+    {
+     "dex": 272,
+     "ko": "로파파",
+     "en": "로파파"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 13,
+     "ko": "뿔충이",
+     "en": "뿔충이"
+    },
+    {
+     "dex": 14,
+     "ko": "딱충이",
+     "en": "딱충이"
+    },
+    {
+     "dex": 15,
+     "ko": "독침붕",
+     "en": "독침붕"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 265,
+     "ko": "개무소",
+     "en": "개무소"
+    },
+    {
+     "dex": 266,
+     "ko": "실쿤",
+     "en": "실쿤"
+    },
+    {
+     "dex": 267,
+     "ko": "뷰티플라이",
+     "en": "뷰티플라이"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 16,
+     "ko": "구구",
+     "en": "구구"
+    },
+    {
+     "dex": 17,
+     "ko": "피죤",
+     "en": "피죤"
+    },
+    {
+     "dex": 18,
+     "ko": "피죤투",
+     "en": "피죤투"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 163,
+     "ko": "부우부",
+     "en": "부우부"
+    },
+    {
+     "dex": 164,
+     "ko": "야부엉",
+     "en": "야부엉"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 43,
+     "ko": "뚜벅쵸",
+     "en": "뚜벅쵸"
+    },
+    {
+     "dex": 44,
+     "ko": "냄새꼬",
+     "en": "냄새꼬"
+    },
+    {
+     "dex": 45,
+     "ko": "라플레시아",
+     "en": "라플레시아"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 60,
+     "ko": "발챙이",
+     "en": "발챙이"
+    },
+    {
+     "dex": 61,
+     "ko": "슈륙챙이",
+     "en": "슈륙챙이"
+    },
+    {
+     "dex": 62,
+     "ko": "강챙이",
+     "en": "강챙이"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 63,
+     "ko": "캐이시",
+     "en": "캐이시"
+    },
+    {
+     "dex": 64,
+     "ko": "윤겔라",
+     "en": "윤겔라"
+    },
+    {
+     "dex": 65,
+     "ko": "후딘",
+     "en": "후딘"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 66,
+     "ko": "알통몬",
+     "en": "알통몬"
+    },
+    {
+     "dex": 67,
+     "ko": "근육몬",
+     "en": "근육몬"
+    },
+    {
+     "dex": 68,
+     "ko": "괴력몬",
+     "en": "괴력몬"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 74,
+     "ko": "꼬마돌",
+     "en": "꼬마돌"
+    },
+    {
+     "dex": 75,
+     "ko": "데구리",
+     "en": "데구리"
+    },
+    {
+     "dex": 76,
+     "ko": "딱구리",
+     "en": "딱구리"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 92,
+     "ko": "고오스",
+     "en": "고오스"
+    },
+    {
+     "dex": 93,
+     "ko": "고우스트",
+     "en": "고우스트"
+    },
+    {
+     "dex": 94,
+     "ko": "팬텀",
+     "en": "팬텀"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 273,
+     "ko": "도토링",
+     "en": "도토링"
+    },
+    {
+     "dex": 274,
+     "ko": "잎새코",
+     "en": "잎새코"
+    },
+    {
+     "dex": 275,
+     "ko": "다탱구",
+     "en": "다탱구"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 287,
+     "ko": "게을로",
+     "en": "게을로"
+    },
+    {
+     "dex": 288,
+     "ko": "발바로",
+     "en": "발바로"
+    },
+    {
+     "dex": 289,
+     "ko": "게을킹",
+     "en": "게을킹"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 304,
+     "ko": "가보리",
+     "en": "가보리"
+    },
+    {
+     "dex": 305,
+     "ko": "갱도라",
+     "en": "갱도라"
+    },
+    {
+     "dex": 306,
+     "ko": "보스로라",
+     "en": "보스로라"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 328,
+     "ko": "톱치",
+     "en": "톱치"
+    },
+    {
+     "dex": 329,
+     "ko": "비브라바",
+     "en": "비브라바"
+    },
+    {
+     "dex": 330,
+     "ko": "플라이곤",
+     "en": "플라이곤"
+    }
+   ]
+  },
+  {
+   "rarity": "common",
+   "chain": [
+    {
+     "dex": 147,
+     "ko": "미뇽",
+     "en": "미뇽"
+    },
+    {
+     "dex": 148,
+     "ko": "신뇽",
+     "en": "신뇽"
+    },
+    {
+     "dex": 149,
+     "ko": "망나뇽",
+     "en": "망나뇽"
+    }
+   ]
+  }
+ ],
+ "legendaries": [
+  {
+   "dex": 150,
+   "ko": "뮤츠",
+   "en": "Mewtwo"
+  },
+  {
+   "dex": 151,
+   "ko": "뮤",
+   "en": "Mew"
+  },
+  {
+   "dex": 249,
+   "ko": "루기아",
+   "en": "Lugia"
+  },
+  {
+   "dex": 250,
+   "ko": "칠색조",
+   "en": "Ho-Oh"
+  },
+  {
+   "dex": 384,
+   "ko": "레쿠쟈",
+   "en": "Rayquaza"
+  },
+  {
+   "dex": 483,
+   "ko": "디아루가",
+   "en": "Dialga"
+  },
+  {
+   "dex": 484,
+   "ko": "펄기아",
+   "en": "Palkia"
+  },
+  {
+   "dex": 487,
+   "ko": "기라티나",
+   "en": "Giratina"
+  },
+  {
+   "dex": 643,
+   "ko": "레시라무",
+   "en": "Reshiram"
+  },
+  {
+   "dex": 644,
+   "ko": "제크로무",
+   "en": "Zekrom"
+  }
+ ]
+}
